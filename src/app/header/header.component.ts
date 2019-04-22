@@ -7,19 +7,8 @@ import {NavigationService} from '../shared/navigation/navigation.service';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  activeTab: NavigationTab = NavigationTab.Recipes;
   navigationTab = NavigationTab;
-  @Output() activeTabChanged = new EventEmitter<NavigationTab>();
 
-  constructor(public NavigationService: NavigationService) {}
+  constructor() {}
 
-  setActiveTab(activeType: NavigationTab) {
-    this.activeTab = activeType;
-    this.activeTabChanged.emit(activeType);
-    this.NavigationService.changeTab(activeType);
-  }
-
-  getActiveClass(tab: NavigationTab): string{
-    return tab === this.activeTab ? "active" : "";
-  }
 }

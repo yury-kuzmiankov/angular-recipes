@@ -24,6 +24,13 @@ export class RecipeService  {
 
   constructor(private shoppingListService: ShoppingListService) {}
 
+  public getRecipe(id: string) {
+    const recipe = this.getRecipes().find((recipe: Recipe) =>{
+      return recipe.id === +id;
+    });
+    return recipe;
+  }
+
   public getRecipes() {
     return [...this.recipes];
   }

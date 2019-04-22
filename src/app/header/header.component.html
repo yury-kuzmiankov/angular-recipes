@@ -5,8 +5,8 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="nav-item {{ getActiveClass(navigationTab.Recipes) }}"><a href="#" (click)="setActiveTab(navigationTab.Recipes)">Recipes</a></li>
-        <li class="nav-item {{ getActiveClass(navigationTab.ShoppingList) }}"><a href="#" (click)="setActiveTab(navigationTab.ShoppingList)">Shopping List</a></li>
+        <li class="nav-item" routerLinkActive="active"><a routerLink="/recipes" routerLinkActive="active">Recipes</a></li>
+        <li class="nav-item" routerLinkActive="active"><a routerLink="/shopping-list" routerLinkActive="active">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
